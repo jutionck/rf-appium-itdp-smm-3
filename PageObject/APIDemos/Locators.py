@@ -1,0 +1,5 @@
+accessBilityXpath='//android.widget.TextView[@content-desc="Accessibility"]'
+accessBilityNodeProviderXpath='//android.widget.TextView[@content-desc="Accessibility Node Querying"]'
+accessBilityNodeQueryingXpath='//android.widget.TextView[@content-desc="Accessibility Node Querying"]'
+accessBilityServiceXpath='//android.widget.TextView[@content-desc="Accessibility Service"]'
+accessBilityCustomViewXpath='//android.widget.TextView[@content-desc="Custom View"]'
