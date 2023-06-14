@@ -1,5 +1,5 @@
 *** Settings ***
-Library      AppiumLibrary
+Library    AppiumLibrary
 Variables    ../../PageObject/APIDemos/Locators.py
 
 *** Variables ***
