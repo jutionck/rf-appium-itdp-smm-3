@@ -28,14 +28,20 @@ As a User I Want To Login
     Input Password    ${passwordElement}    ${password}
     Click Element    ${loginBtnElement}
 
-# As a User I Want to Choose Item
-#     Sleep    1
-#     Click Element    //android.view.ViewGroup[@content-desc="test-Item"][1]/android.view.ViewGroup/android.widget.ImageView
+As a User I Want to Choose Item
+    Sleep    1
+    Click Element    ${viewItemElement}
+
+As a User I Want Pinch and Zoom Item
+    &{scrollGesture}    create dictionary    left=${1000}    top=${545}    width=${200}    height=${200}    percent=${0.75}
+    Sleep               1                  
+    Execute Script      mobile: pinchOpenGesture    &{scrollGesture}
+    Sleep    3
 
 # As a User I Want View Item Detail and Add To Cart
-#     # &{scrollGesture}    create dictionary    left=${361}    top=${50}    width=${150}    height=${200}    percent=${1.0} 
-#     # Sleep               1                  
-#     # Execute Script      mobile: pinchOpenGesture    &{scrollGesture}
+#     &{scrollGesture}    create dictionary    left=${368}    top=${545}    width=${150}    height=${200}    percent=${1.0} 
+#     Sleep               1                  
+#     Execute Script      mobile: pinchOpenGesture    &{scrollGesture}
 #     Sleep    2
 #     Capture Page Screenshot
 #     Swipe    500    767    300    300
@@ -79,8 +85,8 @@ As a User I Want To Login
 #     Sleep    1
 #     Page Should Contain Text    ${completeCheckout}
 
-As a User I Want Buy With Drag Item To Cart
-    Sleep    1
-     &{dragGesture}    create dictionary    startX=${94}    startY=${1455}    endX=${500}    endY=${333}
-    Sleep               2 
-    Execute Script      mobile: dragGesture    &{dragGesture}
+# As a User I Want Buy With Drag Item To Cart
+#     Sleep    1
+#      &{dragGesture}    create dictionary    startX=${94}    startY=${1455}    endX=${500}    endY=${333}
+#     Sleep               2 
+#     Execute Script      mobile: dragGesture    &{dragGesture}
