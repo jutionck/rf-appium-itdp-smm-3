@@ -9,13 +9,15 @@ Start Session Apps
     ...    ${deviceName}    
     ...    ${app}
     ...    ${appActivity}
+    ...    ${automationName}
     Open Application    
-    ...    http://localhost:4723/wd/hub    
+    ...    http://localhost:4723    
     ...    platformName=${platformName}    
     ...    platformVersion=${platformVersion}
     ...    deviceName=${deviceName}
     ...    app=${app}
     ...    appActivity=${appActivity}
+    ...    automationName=${automationName}
 
 Tap Screen Position With One Finger
     [Arguments]       ${X}    ${Y}
@@ -30,6 +32,10 @@ Check Availability of Visible Text
 
 Press Back Button
     Press Keycode    4
+
+Swipe Up My Screen
+    # Coordinate    x, y, dist_x, dist_y, duration
+    Swipe    500    1000    500    500    500
 
 Close Session Apps
     Capture Page Screenshot

@@ -31,3 +31,7 @@ Input Portion and Serving on Detail Item
     [Arguments]    ${portion}    ${serving}
     Input Text    ${portionOnMealScreenElement}    ${portion}
     Input Text    ${servingOnMealScreenElement}    ${serving}
+
+Search Profile
+    [Arguments]    ${name}
+    Input Text     ${searchPersonOnProfileScreenElement}    ${name}

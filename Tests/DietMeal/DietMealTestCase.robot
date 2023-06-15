@@ -4,9 +4,10 @@ Resource       ../../Resources/DietMeal/DietMealResource.robot
 Suite Setup    ComonResource.Start Session Apps    
 ...    Android    
 ...    %{ANDROID_PLATFOM_VERSION=9}    
-...    AOSP on IA Emulator    
-...    ${CURDIR}/../../apk/Diet_meal.apk    
+...    AOSP on IA Emulator  
+...    ${CURDIR}/../../apk/Diet_meal.apk
 ...    com.fghilmany.dietmealapp.ui.main.MainActivity
+...    UiAutomator2
 Suite Teardown    ComonResource.Close Session Apps
 
 *** Test Cases ***
@@ -21,6 +22,7 @@ As a User I Want to Input Welcome Screen Form
 
 As a User I Want to Choose Activity
     [Tags]    Regression
+    Sleep    1
     DietMealResource.Select My Activity
 
 As a User I Want Go To Meals Screen
@@ -42,6 +44,24 @@ As a User I Want to Back To Screen Meal and Home
     [Tags]    Functional
     ComonResource.Press Back Button
     DietMealResource.Go To Home Screen
+
+As a User I Want to Swipe Up List Meal on Home Screen
+    [Tags]    Functional
+    Sleep    1
+    ComonResource.Swipe Up My Screen
+    Sleep    1
+
+As a User I Want to Swipe Up List People on Profile Screen
+    [Tags]    Functional
+    DietMealResource.Go To Profile Screen
+    Sleep    1
+    ComonResource.Swipe Up My Screen
+    Sleep    1
+
+As A User I Want to Search Person on Profile Screen
+    [Tags]    Functional
+    DietMealResource.Search Profile    far
+    ComonResource.Check Availability of Visible Text    Faris
 
     
 
